@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://api.example.com/booking.json#",
+    "type":"array",
+    "minItems":0,
+    "uniqueItems": true,
+    "items": {
+        "type":"object",
+        "properties": {
+            "member_mail":{
+                "type":"string",
+                "minLength":1,
+                "maxLength": 255
+            },
+            "coach_mail":{
+                "type":"string",
+                "minLength":1,
+                "maxLength": 255
+            },
+            "workout_id":{
+                "type":["string","integer"],
+                "minLength":1,
+                "maxLength": 255
+            },
+            "date":{
+                "type":"string"
+            },
+            "time_range":{
+                "type":"string",
+                "minLength":1,
+                "maxLength": 255
+            },
+            "member_cancel":{
+                "type":"integer",
+                "enum": [0,1]
+            },
+            "coach_cancel":{
+                "type":"integer",
+                "enum": [0,1]
+            },
+            "coach_message":{
+                "type":["string","null"]
+            },
+            "status":{
+                "type":"string",
+                "enum": ["pending","accepted","rejected"]
+            },
+            "firstname":{
+                "type":"string",
+                "minLength":1
+            },
+            "lastname":{
+                "type":"string",
+                "minLength":1
+            },
+            "name":{
+                "type":"string",
+                "minLength":1
+            }
+        },
+        "required": ["date","time_range","member_cancel","coach_cancel","status","firstname","lastname","name"],
+        "additionalProperties": false
+    },
+    "additionalProperties": false
+}
