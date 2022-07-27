@@ -1,0 +1,131 @@
+body{
+	/*background: lightgray;*/
+	margin: 0;
+	padding: 0;
+}
+.logo{
+	height: 100px;
+	width: 300px;
+	float: left;
+	padding: 0 100px 0 10px;
+	
+}
+nav{
+	width: 100%;
+	height: 100px;
+	background: #b8b8b8;
+}
+nav ul{
+	float: left;
+}
+nav ul li{
+	float: left;
+	list-style: none;
+	width: 200px;
+	position: relative;
+}
+nav ul li a{
+	color: #073a6a;
+	display: block;
+	padding: 24px 14px;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: larger;
+	text-align: center; /*new*/
+}
+nav ul li a:hover{
+	color: #b8b8b8;
+	background: #0736a6;
+	text-transform: uppercase; /*new*/
+}
+nav ul li ul{
+	display: none;
+	position: absolute;
+	background: #b8b8b8;
+	padding: 10px;
+	border-radius: 0 0 4px 4px;
+}
+nav ul li:hover ul{
+	display: block;
+}
+/*dropdown*/
+nav ul li ul li{
+	border-radius: 4px;
+}
+nav ul li ul li a{
+	padding: 21px 15px;
+	font-size: small;
+	
+}
+nav ul li ul li a:hover{
+	background: #0736a6;
+	color: #b8b8b8;
+}
+nav ul li a.active{
+	background-color: #0736a6;
+	color:white;
+	text-transform: uppercase;
+}
+.footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b8b8b8;
+  color: #073a6a;
+}
+/* set each row and column*/
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .contact-image {
+	background-image: url("../images/contact.jpg");
+	background-color: #cccccc;
+	height: 800px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+  }
+  
+  .contact-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+  }
+  .trainer-image {
+	background-image: url("../images/trainers/trainers.jpg");
+	background-color: #cccccc;
+	height: 800px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	
+  }
+  
+  .trainer-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	
+  }
